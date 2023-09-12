@@ -17,7 +17,7 @@ end
 class Manager < Employee 
   
   attr_accessor :subordinates
-  attr_reader :name, :salary
+  #attr_reader :name, :salary
 
   def initialize(name, title, salary, boss=nil)
     @subordinates = []
