@@ -1,15 +1,17 @@
 require_relative "board"
-
+require_relative "game"
+require_relative "player"
 module Stepable
 
-  def blocked? 
-    return true if current_player.color == Board.[](end_pos).color 
+
+  def blocked?(end_pos)
+    return true if @current_player.color == Board(end_pos).color 
     false 
   end
 
   def unblocked_moves
     unblocked_moves_arr = []
-    inbounds_moves.each do |move|
+    @possible_moves.each do |move|
       if !blocked?(move)
         unblocked_moves_arr << move  
       end

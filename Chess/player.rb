@@ -6,4 +6,10 @@ class Player
     @color = color
     @display = "display" 
   end
+
+  def color
+    @color
+  end
+
+  
 end

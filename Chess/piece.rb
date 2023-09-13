@@ -1,3 +1,6 @@
+require_relative "stepable"
+require_relative "king"
+
 class Piece
 
     attr_reader :color 
@@ -8,9 +11,9 @@ class Piece
         @pos = pos
     end
 
-    # def inspect
-    #   @color.to_s 
-    # end
+    def inspect
+      @color.to_s 
+    end
 end
 
  

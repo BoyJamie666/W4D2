@@ -1,8 +1,9 @@
 require_relative 'piece'
 require_relative 'border'
+require_relative 'stepable'
+
 
 class Board
-
     include Border 
     def initialize
         @rows = Array.new(8){Array.new(8, nil)}
@@ -27,10 +28,10 @@ class Board
 
     def populate
       (0..7).each do |i|
-          self.[]=([0, i], Piece.new(:w, 'board', [0, i]))  
-          self.[]=([1, i], Piece.new(:w, 'board', [1, i]))
-          self.[]=([6, i], Piece.new(:b, 'board', [6, i]))  
-          self.[]=([7, i], Piece.new(:b, 'board', [7, i])) 
+          self.[]=([0, i], Piece.new(:w, self, [0, i]))  
+          self.[]=([1, i], Piece.new(:w, self, [1, i]))
+          self.[]=([6, i], Piece.new(:b, self, [6, i]))  
+          self.[]=([7, i], Piece.new(:b, self, [7, i])) 
       end  
     end
 
