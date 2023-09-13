@@ -1,4 +1,10 @@
+require_relative "display" 
+require_relative "player"
+
 class Game
+  
+    attr_reader :current_player
+end
     def initialize
         @board = board
         @display: display
@@ -15,10 +21,15 @@ class Game
     end
 
     def swap_turn!
+        if @current_player == @player_1
+          @current_player = player_2
+        elsif @current_player == @player_2
+          @current_player = player_1
+        end
     end
 end
 
-class display
+# class display
     
-    @board = board
-    @cursor
+#     @board = board
+#     @cursor 
