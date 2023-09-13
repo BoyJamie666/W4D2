@@ -3,7 +3,7 @@ require_relative 'border'
 
 class Board
 
-    include "border"
+    include Border 
     def initialize
         @rows = Array.new(8){Array.new(8, nil)}
         self.populate
