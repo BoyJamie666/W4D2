@@ -20,10 +20,10 @@ class board
     end
 
     def move_piece(color, start_pos, end_pos)
-        if [](start_pos) == nil 
-            raise "Your starting position must contain a piece"
+        if [](start_pos) == nil  #|| [](start_pos) == enemy color
+            raise "Your starting position must contain an allied piece."
         end
-        if [](end_pos) != nil && #!= enemy color
+        if [](end_pos) != nil #&& [](end_pos) != enemy color
             raise "Your ending position is occupied by an allied piece already"
         end
         if (end_pos[0] < 0 || end_pos[0] > 8) || (end_pos[1] < 0 || end_pos[1] > 8)
