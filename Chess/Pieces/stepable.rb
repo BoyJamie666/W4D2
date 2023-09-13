@@ -1,9 +1,8 @@
-require_relative "board"
-require_relative "game"
-require_relative "player"
+# require_relative "board"
+# require_relative "game"
+# require_relative "player"
 module Stepable
-
-
+  
   def blocked?(end_pos)
     return true if @current_player.color == Board(end_pos).color 
     false 

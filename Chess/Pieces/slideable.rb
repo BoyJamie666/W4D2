@@ -27,7 +27,7 @@ module Slideable
     # use the pice's subclass
  end
 
- private_method
+private
 
  def move_dirs
   raise NotImplementedError

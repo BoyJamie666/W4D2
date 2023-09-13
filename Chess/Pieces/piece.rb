@@ -1,5 +1,3 @@
-require_relative "stepable"
-require_relative "king"
 
 class Piece
 
@@ -13,6 +11,28 @@ class Piece
 
     def inspect
       @color.to_s 
+    end
+
+    def empty?
+        
+    end
+
+    def valid_moves
+        
+    end
+
+    def pos=(val)
+        
+    end
+
+    def Symbol
+        
+    end
+
+    private
+
+    def move_into_check?(end_pos)
+        
     end
 end
 
